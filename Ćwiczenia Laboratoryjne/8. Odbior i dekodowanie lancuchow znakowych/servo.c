@@ -1,85 +1,93 @@
 #include <LPC21xx.H>
-#include "led.h"
 #include "servo.h"
+#include "led.h"
 #include "timer_interrupts.h"
 
-#define mDetector 0x00000400 //1<<10
+#define DETECTOR_bm 1<<10
 
-//cwiczenie 1
+/**********enum declaration***********/
 
-void DetectorInit(void){
-	IO0DIR &= ~(mDetector);  //ustawienie pinu detektora jako wejsciowego (aktywowany zerem)
-}
+enum KeyboardRead {ACTIVE, INACTIVE};
+enum ServoState {CALLIB, IDLE, IN_PROGRESS};
 
-enum DetectorState eReadDetector(void){
-	if((IO0PIN&mDetector)==0){
-		return INACTIVE;
-	}
-	else{
-		return ACTIVE;
-	}
-} 
+/**********structure declaration***********/
 
-//cwiczenie 2
+struct Servo{
+enum ServoState eState;
+unsigned int uiCurrentPosition;
+unsigned int uiDesiredPosition;
+};
 
 struct Servo sServo;
 
-//cwiczenie 3
+/**********function declaration***********/
 
-void Servo_Callib(void){
-	sServo.eState = CALLIB;
+void DetectorInit(void){
+	IO0DIR &= ~(DETECTOR_bm);
 }
 
-void Servo_GoTo(unsigned int uiPosition){
-	sServo.uiDesiredPosition = uiPosition;
-}
 
-void Automat(void){
-	switch(sServo.eState){
-		
+enum KeyboardRead eKeyboardRead(void){
+	if ((DETECTOR_bm & IO0PIN) == 0){
+		return ACTIVE;
+	}
+	else{
+		return INACTIVE;
+	}
+};
+
+void ServoControll(void){
+	switch(sServo.eState){		
 		case CALLIB: 
-			if(INACTIVE == eReadDetector()){
-				Led_StepLeft();
-				sServo.eState = CALLIB;
-			}
-			else{
-				sServo.uiCurrentPosition = 0;
-				sServo.uiDesiredPosition = 0;
-				sServo.eState = IDLE;
-			}
-			break;
-			
-		case IDLE:
-			if(sServo.uiCurrentPosition != sServo.uiDesiredPosition){
-				sServo.eState = IN_PROGRESS;
-			}
-			else{
-				sServo.eState = IDLE;
-			}
-			break;
-			
-		case IN_PROGRESS: 
-				if(sServo.uiCurrentPosition < sServo.uiDesiredPosition){
-					Led_StepLeft();
-					sServo.uiCurrentPosition ++;
-					sServo.eState = IN_PROGRESS;
+				if(ACTIVE == eKeyboardRead()){
+					sServo.uiDesiredPosition = 0;
+					sServo.uiCurrentPosition = 0;
+					sServo.eState = IDLE;
 				}
-				else if(sServo.uiCurrentPosition > sServo.uiDesiredPosition){
-					Led_StepRight();
-					sServo.uiCurrentPosition --;
+				else{
+					Led_StepLeft();
+					sServo.eState = CALLIB;
+				}
+				break;
+				
+		case IDLE: 
+				if(sServo.uiCurrentPosition != sServo.uiDesiredPosition){
 					sServo.eState = IN_PROGRESS;
 				}
 				else{
 					sServo.eState = IDLE;
 				}
 				break;
+				
+		case IN_PROGRESS: 
+				if(sServo.uiCurrentPosition < sServo.uiDesiredPosition){
+					sServo.uiCurrentPosition ++;
+					Led_StepRight();
+					sServo.eState = IN_PROGRESS;
+				}
+				else if(sServo.uiCurrentPosition > sServo.uiDesiredPosition){
+					sServo.uiCurrentPosition --;
+					Led_StepLeft();
+					sServo.eState = IN_PROGRESS;
+				}
+				else{
+					sServo.eState = IDLE;
+		}
+				break;
 	}
-}
+};
 
 void Servo_Init(unsigned int uiServoFrequency){
-	uiServoFrequency=1000000/uiServoFrequency;
-	sServo.eState = CALLIB;
 	DetectorInit();
 	Led_Init();
-	Timer0Interrupts_Init(uiServoFrequency, Automat);
-}
+	sServo.eState = CALLIB;
+	Timer0Interrupts_Init(1000000/uiServoFrequency, ServoControll); //zamiana okresu na czestotliwosc 
+};
+
+void Servo_Callib(void){
+	sServo.eState = CALLIB;
+};
+
+void Servo_GoTo(unsigned int uiPosition){
+	sServo.uiDesiredPosition = uiPosition;
+};

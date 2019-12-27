@@ -4,6 +4,11 @@
 #include "keyboard.h"
 #include "led.h"
 
+#define LED0_bm 0x1<<16
+#define LED1_bm 0x1<<17
+#define LED2_bm 0x1<<18
+#define LED3_bm 0x1<<19
+
 //Global variables
 
 extern char cOdebranyZnak;
@@ -12,15 +17,52 @@ unsigned int uiDesiredPosition = 0;
 
 int main(void){
 	
-	
-/*
-------------CWICZENIE 2-------------
-	
+	Servo_Init(400);
+	KeyboardInit();
 	UART_InitWithInt(9600);
-	Led_Init();
 	
-	while(1){	
-	
+	while(1){
+		
+		switch(eKeyboard_Read()){
+			
+			case BUTTON_1:
+					Servo_Callib();
+					break;
+			
+			case BUTTON_2:
+					Servo_GoTo(50);
+					break;
+			
+			case BUTTON_3:
+					Servo_GoTo(100);
+					break;
+			
+			case BUTTON_4:
+					Servo_GoTo(150);
+					break;
+			default:
+				break;
+		}
+		
+		switch(cOdebranyZnak){
+			case 'c':
+
+				Servo_Callib();
+				uiDesiredPosition = 0;
+				cOdebranyZnak = 0;
+				break;
+			
+			case '1':
+				uiDesiredPosition = uiDesiredPosition + 50; 
+				Servo_GoTo(uiDesiredPosition);
+				cOdebranyZnak = 0;
+				break;	
+		}
+	}
+}
+
+/*
+------------CWICZENIE 2-------------	
 		switch(cOdebranyZnak){
 			
 			case 'c':
@@ -48,16 +90,13 @@ int main(void){
 				cOdebranyZnak = 0;
 				break;			
 		}
-	}
+
 */
-
-
-
 
 /* 
 ------------CWICZENIE 3-------------
 
-	Servo_Init(500);
+	Servo_Init(2500);
 	Keyboard_Init();
 	UART_InitWithInt(9600);
 	
@@ -109,7 +148,7 @@ int main(void){
 /*
 ------------CWICZENIE 4-------------
 
-	Servo_Init(500);
+	Servo_Init(2500);
 	Keyboard_Init();
 	UART_InitWithInt(9600);
 	
@@ -151,5 +190,3 @@ int main(void){
 
 
 */
-
-}

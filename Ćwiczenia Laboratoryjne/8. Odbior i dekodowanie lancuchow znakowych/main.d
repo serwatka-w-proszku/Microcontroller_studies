@@ -1,6 +1,6 @@
 .\main.o: main.c
-.\main.o: E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H
-.\main.o: keyboard.h
-.\main.o: led.h
-.\main.o: servo.h
+.\main.o: C:\Keil\ARM\Inc\Philips\LPC21xx.H
 .\main.o: uart.h
+.\main.o: servo.h
+.\main.o: string.h
+.\main.o: command_decoder.h

@@ -1,2 +1,2 @@
-.\timer.o: timer.c
-.\timer.o: D:\KEIL\ARM\Inc\Philips\LPC21xx.H
+.\timery.o: timery.c
+.\timery.o: C:\Keil\ARM\Inc\Philips\LPC21xx.H

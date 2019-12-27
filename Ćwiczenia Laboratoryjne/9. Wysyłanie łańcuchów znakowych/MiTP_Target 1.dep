@@ -1,0 +1,36 @@
+Dependencies for Project 'MiTP', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x5902F17A)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 513"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x59030972)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (uart.h)(0x5902F17A)
+I (string.h)(0x5903097E)
+I (servo.h)(0x5902F17A)
+I (watchdog.h)(0x5902F17A)
+I (timer_interrupts.h)(0x59030202)
+I (command_decoder.h)(0x5902F178)
+I (keyboard.h)(0x5902F178)
+F (.\keyboard.c)(0x5902F178)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (keyboard.h)(0x5902F178)
+F (.\led.c)(0x5902F178)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (led.h)(0x5902F178)
+F (.\timer_interrupts.c)(0x59030326)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\timer_interrupts.o --omf_browse .\timer_interrupts.crf --depend .\timer_interrupts.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (timer_interrupts.h)(0x59030202)
+F (.\servo.c)(0x590301EC)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\servo.o --omf_browse .\servo.crf --depend .\servo.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (servo.h)(0x5902F17A)
+I (led.h)(0x5902F178)
+I (timer_interrupts.h)(0x59030202)
+F (.\uart.c)(0x5902F17A)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC210X.H)(0x53202B46)
+I (uart.h)(0x5902F17A)
+I (string.h)(0x5903097E)
+F (.\string.c)(0x59030932)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\string.o --omf_browse .\string.crf --depend .\string.d)
+I (string.h)(0x5903097E)
+F (.\command_decoder.c)(0x5902F178)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\command_decoder.o --omf_browse .\command_decoder.crf --depend .\command_decoder.d)
+I (string.h)(0x5903097E)
+I (command_decoder.h)(0x5902F178)
+F (.\watchdog.c)(0x5902F17A)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\watchdog.o --omf_browse .\watchdog.crf --depend .\watchdog.d)
+I (watchdog.h)(0x5902F17A)

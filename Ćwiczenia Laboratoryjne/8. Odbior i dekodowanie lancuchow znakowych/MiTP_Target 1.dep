@@ -1,23 +1,30 @@
 Dependencies for Project 'MiTP', Target 'Target 1': (DO NOT MODIFY !)
-F (.\Startup.s)(0x56CC6EBA)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 513"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
-F (.\main.c)(0x56CF4469)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
-I (keyboard.h)(0x56CC6EBA)
-I (led.h)(0x56CC6EBA)
-I (servo.h)(0x56CF3D6E)
-I (uart.h)(0x56CF3F71)
-F (.\keyboard.c)(0x56CC6EBA)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
-I (keyboard.h)(0x56CC6EBA)
-F (.\led.c)(0x56CC6EBA)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\led.o --omf_browse .\led.crf --depend .\led.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
-I (led.h)(0x56CC6EBA)
-F (.\timer_interrupts.c)(0x56CCBA7E)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\timer_interrupts.o --omf_browse .\timer_interrupts.crf --depend .\timer_interrupts.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
-F (.\servo.c)(0x56CCC18B)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\servo.o --omf_browse .\servo.crf --depend .\servo.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
-I (led.h)(0x56CC6EBA)
-I (servo.h)(0x56CF3D6E)
-I (timer_interrupts.h)(0x56CC6EBA)
-F (.\uart.c)(0x56CF3C1B)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
-I (E:\Keil_v5\ARM\Inc\Philips\LPC210X.H)(0x53201D36)
+F (.\Startup.s)(0x58FA3926)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\uart.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\servo.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\string.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\command_decoder.h)(0x58FA3926)
+F (.\keyboard.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\keyboard.h)(0x58FA3926)
+F (.\led.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\led.h)(0x58FA3926)
+F (.\timer_interrupts.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\timer_interrupts.o --omf_browse .\timer_interrupts.crf --depend .\timer_interrupts.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\timer_interrupts.h)(0x58FA3926)
+F (.\servo.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\servo.o --omf_browse .\servo.crf --depend .\servo.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\servo.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\led.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\timer_interrupts.h)(0x58FA3926)
+F (.\uart.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (C:\Keil\ARM\Inc\Philips\LPC210X.H)(0x51C89A3C)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\uart.h)(0x58FA3926)
+F (.\string.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\string.o --omf_browse .\string.crf --depend .\string.d)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\string.h)(0x58FA3926)
+F (.\command_decoder.c)(0x58FA3926)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\command_decoder.o --omf_browse .\command_decoder.crf --depend .\command_decoder.d)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\string.h)(0x58FA3926)
+I (C:\Users\student\Desktop\do oddanie na 21.04\8. Odbiór i dekodowanie êaScuchów znakowych #skonczone\command_decoder.h)(0x58FA3926)
