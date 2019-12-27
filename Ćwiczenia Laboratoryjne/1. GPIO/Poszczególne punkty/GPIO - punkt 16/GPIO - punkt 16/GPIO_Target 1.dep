@@ -1,0 +1,4 @@
+Dependencies for Project 'GPIO', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x5153E84D)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I h:\Keil\ARM\RV31\INC -I h:\Keil\ARM\CMSIS\Include -I h:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
+F (.\main.c)(0x5153F848)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I h:\Keil\ARM\RV31\INC -I h:\Keil\ARM\CMSIS\Include -I h:\Keil\ARM\Inc\Philips -o "main.o" --omf_browse "main.crf" --depend "main.d")
+I (h:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x5086EF4E)

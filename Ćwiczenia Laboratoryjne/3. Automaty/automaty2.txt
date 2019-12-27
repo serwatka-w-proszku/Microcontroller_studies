@@ -1,0 +1,46 @@
+
+#include "keyboard.h"
+#include "led.h"
+
+void Delay (int iMiliSecondMulti){ 
+	int iDelayCounter; 
+	int iMiliSecond=7497; 
+	for (iDelayCounter=0; iDelayCounter<iMiliSecondMulti*iMiliSecond; iDelayCounter++); 
+} 
+
+enum AutomatState {STATE0, STATE1, STATE2, STATE3, STATE4, STATE5};
+enum AutomatState eLedState=STATE0;
+
+int main(){ 
+		
+	Led_Init();
+	switch(eLedState){
+		
+			case STATE0:
+											eLedState=STATE1;
+											Led_StepRight();
+											break;
+			case STATE1:
+											eLedState=STATE2;
+											Led_StepRight();
+											break;
+			case STATE2:
+											eLedState=STATE3;
+											Led_StepRight();
+											break;
+			case STATE3:
+											eLedState=STATE4;
+											Led_StepLeft();
+											break;
+			case STATE4:
+											eLedState=STATE5;
+											Led_StepLeft();
+											break;
+			case STATE5:
+											eLedState=STATE0;
+											Led_StepLeft();
+											break;
+	}
+	Delay(500);
+	
+}

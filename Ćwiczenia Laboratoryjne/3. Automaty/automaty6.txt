@@ -1,0 +1,43 @@
+
+
+#include "led.h"
+#include "keyboard.h"
+
+void Delay(unsigned int uiDelay)
+{
+	unsigned int uiLoopCounter;
+	
+	for(uiLoopCounter=0; uiLoopCounter<(5453*uiDelay); uiLoopCounter++) {};
+}
+
+int main(void)
+{	
+	enum AutomatState { MOVE_RIGHT, STOP };
+	enum AutomatState eAutomatState = MOVE_RIGHT;
+	
+	Led_Init();
+	
+	while(1){
+		switch(eAutomatState){
+			case MOVE_RIGHT:
+				if(eKeyboard_Read() == BUTTON_1){
+					eAutomatState = STOP;
+				}
+				else{
+					Led_StepRight();
+					eAutomatState = MOVE_RIGHT;
+				}
+				break;
+				
+			case STOP:
+				if(eKeyboard_Read() == BUTTON_2){
+					eAutomatState = MOVE_RIGHT;
+				}
+				else{
+					eAutomatState = STOP;
+				}
+				break;
+		}
+		Delay(250);
+	}
+}

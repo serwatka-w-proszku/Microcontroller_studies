@@ -1,0 +1,16 @@
+Dependencies for Project 'MiTP', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x546EB3C2)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 513"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x568EB768)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (timer_interrupts.h)(0x568EB4C4)
+I (keyboard.h)(0x546EB39E)
+I (led.h)(0x546EB3A4)
+F (.\keyboard.c)(0x546EB39A)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (keyboard.h)(0x546EB39E)
+F (.\led.c)(0x546EB3A0)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (led.h)(0x546EB3A4)
+F (.\timer_interrupts.c)(0x568EBAC6)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\timer_interrupts.o --omf_browse .\timer_interrupts.crf --depend .\timer_interrupts.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+F (..\..\Servo\servo.c)(0x56CC4CDE)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\servo.o --omf_browse .\servo.crf --depend .\servo.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)

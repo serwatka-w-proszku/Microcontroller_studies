@@ -1,0 +1,14 @@
+Dependencies for Project 'MiTP', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x546EB56A)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\KEIL\ARM\RV31\INC-I D:\KEIL\ARM\CMSIS\Include-I D:\KEIL\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x547B60F7)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\KEIL\ARM\RV31\INC-I D:\KEIL\ARM\CMSIS\Include-I D:\KEIL\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (timer.h)(0x546EB572)
+I (led.h)(0x546EB550)
+F (.\timer.c)(0x546EB56C)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\KEIL\ARM\RV31\INC-I D:\KEIL\ARM\CMSIS\Include-I D:\KEIL\ARM\Inc\Philips-o .\timer.o --omf_browse .\timer.crf --depend .\timer.d)
+I (D:\KEIL\ARM\Inc\Philips\LPC21xx.H)(0x532C4638)
+I (timer.h)(0x546EB572)
+F (.\led.c)(0x546EB54A)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\KEIL\ARM\RV31\INC-I D:\KEIL\ARM\CMSIS\Include-I D:\KEIL\ARM\Inc\Philips-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (D:\KEIL\ARM\Inc\Philips\LPC21xx.H)(0x532C4638)
+I (led.h)(0x546EB550)
+F (.\keyboard.c)(0x546EB544)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\KEIL\ARM\RV31\INC-I D:\KEIL\ARM\CMSIS\Include-I D:\KEIL\ARM\Inc\Philips-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (D:\KEIL\ARM\Inc\Philips\LPC21xx.H)(0x532C4638)
+I (keyboard.h)(0x546EB548)

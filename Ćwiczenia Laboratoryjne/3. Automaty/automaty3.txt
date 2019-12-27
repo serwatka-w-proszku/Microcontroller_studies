@@ -1,0 +1,43 @@
+
+#include "keyboard.h"
+#include "led.h"
+
+void Delay (int iMiliSecondMulti){ 
+	int iDelayCounter; 
+	int iMiliSecond=7497; 
+	for (iDelayCounter=0; iDelayCounter<iMiliSecondMulti*iMiliSecond; iDelayCounter++); 
+} 
+
+enum AutomatState {MOVE_LEFT, MOVE_RIGHT};
+enum AutomatState eAutomatState=MOVE_LEFT;
+unsigned int uiAutomatCounter=0;
+
+int main(){ 
+		
+	Led_Init();
+	switch(eAutomatState){
+		
+			case MOVE_LEFT:
+											uiAutomatCounter++;
+											if(uiAutomatCounter>3){
+												uiAutomatCounter=0;
+												eAutomatState=MOVE_RIGHT;
+											}
+											else{
+												Led_StepLeft();
+											}
+											
+			case MOVE_RIGHT:
+											uiAutomatCounter++;
+											if(uiAutomatCounter>3){
+												uiAutomatCounter=0;
+												eAutomatState=MOVE_LEFT;
+											}
+											else{
+												Led_Stepight();
+											}
+			
+	}
+	Delay(500);
+	
+}

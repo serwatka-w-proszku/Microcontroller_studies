@@ -1,0 +1,20 @@
+Dependencies for Project 'MiTP', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x56CC6EBA)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 513"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x56CCC125)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (keyboard.h)(0x56CC6EBA)
+I (led.h)(0x56CC6EBA)
+I (servo.h)(0x56CCC12E)
+F (.\keyboard.c)(0x56CC6EBA)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (keyboard.h)(0x56CC6EBA)
+F (.\led.c)(0x56CC6EBA)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (led.h)(0x56CC6EBA)
+F (.\timer_interrupts.c)(0x56CCBA7E)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\timer_interrupts.o --omf_browse .\timer_interrupts.crf --depend .\timer_interrupts.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+F (.\servo.c)(0x56CCC15B)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\servo.o --omf_browse .\servo.crf --depend .\servo.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53201D36)
+I (led.h)(0x56CC6EBA)
+I (servo.h)(0x56CCC12E)
+I (timer_interrupts.h)(0x56CC6EBA)

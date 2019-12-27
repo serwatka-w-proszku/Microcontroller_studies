@@ -1,0 +1,32 @@
+#include "keyboard.h"
+#include "led.h"
+
+void Delay (int iMiliSecondMulti){ 
+	int iDelayCounter; 
+	int iMiliSecond=7497; 
+	for (iDelayCounter=0; iDelayCounter<iMiliSecondMulti*iMiliSecond; iDelayCounter++); 
+} 
+
+
+int main(){ 
+	
+	LedInit();
+	KeyboardInit();
+	
+	while(1){
+		
+	switch(eKeyboard_Read()){
+		
+			case RELASED:
+											break;
+			
+			case BUTTON_1:
+											Led_StepRight();
+											break;
+			
+			case BUTTON_2:
+											Led_StepLeft();
+											break;
+		}
+	}
+}
